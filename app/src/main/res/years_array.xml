@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="years_array">
+        <item>2021</item>
+        <item>2022</item>
+        <item>2023</item>
+        <!-- 여기에 원하는 연도 항목들을 추가할 수 있습니다. -->
+    </array>
+
+    <!-- 다른 배열 리소스들도 여기에 추가할 수 있습니다. -->
+</resources>
