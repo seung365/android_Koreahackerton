@@ -27,5 +27,16 @@ public class login2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login2);
 
+
+        ImageButton next = (ImageButton) findViewById(R.id.myButton);
+        next.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(getApplicationContext(), searchAddress.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
