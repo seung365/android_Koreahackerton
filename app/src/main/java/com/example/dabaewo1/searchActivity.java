@@ -42,5 +42,5 @@ public class searchActivity extends AppCompatActivity {
             finish();
         }
     }
-
 }
+

@@ -8,26 +8,29 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
+import android.widget.ImageButton;
+
+import com.example.dabaewo1.searchActivity;
+import com.google.android.material.textfield.TextInputLayout;
 
 public class searchAddress extends AppCompatActivity {
 
     private EditText mEdtAddress;
+    private ImageButton edt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search_address);
+        setContentView(R.layout.activity_login2);
 
-        mEdtAddress = findViewById(R.id.et_address);
-        mEdtAddress.setFocusable(false);
-        mEdtAddress.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //주소 검색 웹뷰 화면으로 이동
-                Intent intent = new Intent(searchAddress.this, searchActivity.class);
-                getSearchResult.launch(intent);
-            }
+        TextInputLayout loginAddField = findViewById(R.id.login_add_field);
+        mEdtAddress = loginAddField.getEditText(); // Get the EditText from TextInputLayout
+        edt = findViewById(R.id.myButton);
+        edt.setFocusable(false);
+        edt.setOnClickListener(view -> {
+            //주소 검색 웹뷰 화면으로 이동
+            Intent intent = new Intent(searchAddress.this, searchActivity.class);
+            getSearchResult.launch(intent);
         });
 
     }
@@ -39,7 +42,9 @@ public class searchAddress extends AppCompatActivity {
                 if (result.getResultCode() == RESULT_OK) {
                     if (result.getData() != null) {
                         String data = result.getData().getStringExtra("data");
-                        mEdtAddress.setText(data);
+                        if (data != null && !data.isEmpty()) {
+                            mEdtAddress.setText(data); // Set the text to the EditText
+                        }
                     }
                 }
             }
