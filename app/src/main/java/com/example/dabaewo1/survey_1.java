@@ -26,6 +26,19 @@ public class survey_1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_survey1);
 
+        ImageButton ok2button = (ImageButton) findViewById(R.id.signup_button);
+        ok2button.setOnClickListener(new View.OnClickListener(){
+
+            public void onClick(View view){
+                Intent intent = new Intent(getApplicationContext(), survey_2.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
+
         ImageButton farmerButton = findViewById(R.id.farmer_button);
         farmerButton.setOnClickListener(new View.OnClickListener() {
             @Override
