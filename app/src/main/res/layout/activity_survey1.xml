@@ -75,7 +75,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.333"
-        app:srcCompat="@drawable/farmer" />
+        app:srcCompat="@drawable/farmer"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 
     <ImageButton
@@ -90,7 +91,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.334"
-        app:srcCompat="@drawable/police" />
+        app:srcCompat="@drawable/police"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
         android:id="@+id/seller_button"
@@ -104,7 +106,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.333"
-        app:srcCompat="@drawable/seller" />
+        app:srcCompat="@drawable/seller"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
         android:id="@+id/programer_button"
@@ -118,7 +121,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.539"
-        app:srcCompat="@drawable/programer" />
+        app:srcCompat="@drawable/programer"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
         android:id="@+id/scientist_button"
@@ -132,7 +136,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.539"
-        app:srcCompat="@drawable/scientist" />
+        app:srcCompat="@drawable/scientist"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
         android:id="@+id/mechanic_button"
@@ -146,7 +151,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.539"
-        app:srcCompat="@drawable/mechanic" />
+        app:srcCompat="@drawable/mechanic"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
         android:id="@+id/worker_button"
@@ -160,7 +166,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.758"
-        app:srcCompat="@drawable/worker" />
+        app:srcCompat="@drawable/worker"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
         android:id="@+id/soldier_button"
@@ -174,7 +181,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.758"
-        app:srcCompat="@drawable/soldier" />
+        app:srcCompat="@drawable/soldier"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
         android:id="@+id/nothing_button"
@@ -188,7 +196,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.749"
-        app:srcCompat="@drawable/nothing" />
+        app:srcCompat="@drawable/nothing"
+
+        tools:ignore="SpeakableTextPresentCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
