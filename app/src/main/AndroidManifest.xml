@@ -23,6 +23,9 @@
             android:name=".searchActivity"
             android:exported="false" />
         <activity
+            android:name=".survey_1"
+            android:exported="false" />
+        <activity
             android:name=".searchAddress"
             android:exported="false" />
         <activity android:name=".login2" />
