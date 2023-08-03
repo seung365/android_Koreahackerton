@@ -228,18 +228,6 @@
             app:layout_constraintTop_toBottomOf="@+id/newperson"
             app:layout_constraintVertical_bias="1.0" />
 
-        <ImageButton
-            android:id="@+id/myButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:background="#00FFFFFF"
-            android:contentDescription="@string/app_name"
-            android:src="@drawable/button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/login_add_field" />
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/login_telefield"
             android:layout_width="327dp"
@@ -289,6 +277,7 @@
             android:textStyle="normal"
             app:layout_constraintBottom_toTopOf="@+id/login_telefield"
             app:layout_constraintStart_toStartOf="parent" />
+        <!-- 기존 코드 생략 -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/login_add_field"
             android:layout_width="330dp"
@@ -311,6 +300,7 @@
                 android:textSize="12sp" />
 
         </com.google.android.material.textfield.TextInputLayout>
+        <!-- 기존 코드 생략 -->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
