@@ -67,11 +67,12 @@
             android:fontFamily="@font/aninormal"
             android:text="별명"
             android:textSize="15sp"
+            android:layout_marginStart="16dp"
 
             android:textStyle="normal"
             app:layout_constraintBottom_toTopOf="@+id/nicknamefield"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.583"
+            app:layout_constraintHorizontal_bias="0.594"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0" />
@@ -116,14 +117,13 @@
             android:id="@+id/nickname3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="3dp"
+            android:layout_marginStart="16dp"
             android:fontFamily="@font/aninormal"
             android:text="아이디"
 
             android:textSize="15sp"
             android:textStyle="normal"
             app:layout_constraintBottom_toTopOf="@+id/login_id_Field"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.038"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -147,11 +147,11 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/aninormal"
             android:text="성별"
+            android:layout_marginStart="16dp"
 
             android:textSize="15sp"
             android:textStyle="normal"
             app:layout_constraintBottom_toTopOf="@+id/gender"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.046"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -248,7 +248,7 @@
             android:id="@+id/mail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="3dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="280dp"
 
             android:fontFamily="@font/aninormal"
@@ -257,7 +257,6 @@
             android:textSize="15sp"
             android:textStyle="normal"
             app:layout_constraintBottom_toTopOf="@+id/login_mail_Field"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.051"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/newperson"
@@ -290,7 +289,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="16dp"
             android:fontFamily="@font/aninormal"
             android:maxLines="1"
             android:text="주소"
