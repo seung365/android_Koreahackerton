@@ -8,11 +8,12 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="230dp"
-        android:layout_height="210dp"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="165dp"
+        android:layout_height="133dp"
+        android:layout_marginTop="4dp"
         android:src="@drawable/survey3_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.93"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ContentDescription" />
@@ -21,13 +22,13 @@
         android:id="@+id/purpose_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="104dp"
         android:fontFamily="@font/gmarketsansttfmedium"
         android:text="강좌이용 목적선택"
         android:textSize="27sp"
-        android:textStyle="bold"
+        android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.081"
+        app:layout_constraintHorizontal_bias="0.183"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,26 +36,22 @@
         android:id="@+id/main_strock"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
         android:backgroundTint="@color/white"
         android:src="@drawable/main_strock"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="146dp" />
 
     <ImageButton
-        android:id = "@+id/purpose1"
+        android:id="@+id/purpose1"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="15dp"
         android:backgroundTint="@color/white"
         android:src="@drawable/purpose1"
-        android:layout_marginTop="15dp"
-        android:layout_marginStart="21dp"
         app:layout_constraintStart_toStartOf="@+id/main_strock"
-        app:layout_constraintTop_toTopOf="@+id/main_strock" />
+        app:layout_constraintTop_toTopOf="@+id/main_strock"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/textView4"
@@ -115,13 +112,13 @@
         app:layout_constraintTop_toBottomOf="@+id/purpose1" />
 
     <ImageButton
-        android:id = "@+id/purpose3"
+        android:id="@+id/purpose3"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="145dp"
         android:backgroundTint="@color/white"
         android:src="@drawable/purpose1"
-        android:layout_marginTop="145dp"
-        android:layout_marginStart="21dp"
         app:layout_constraintStart_toStartOf="@+id/main_strock"
         app:layout_constraintTop_toTopOf="@+id/main_strock" />
 
@@ -150,15 +147,16 @@
         app:layout_constraintTop_toBottomOf="@+id/purpose2" />
 
     <ImageButton
-        android:id = "@+id/purpose4"
+        android:id="@+id/purpose4"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="210dp"
         android:backgroundTint="@color/white"
         android:src="@drawable/purpose1"
-        android:layout_marginTop="210dp"
-        android:layout_marginStart="21dp"
         app:layout_constraintStart_toStartOf="@+id/main_strock"
-        app:layout_constraintTop_toTopOf="@+id/main_strock" />
+        app:layout_constraintTop_toTopOf="@+id/main_strock"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/textView10"
@@ -185,13 +183,13 @@
         app:layout_constraintTop_toBottomOf="@+id/purpose3" />
 
     <ImageButton
-        android:id = "@+id/purpose5"
+        android:id="@+id/purpose5"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="275dp"
         android:backgroundTint="@color/white"
         android:src="@drawable/purpose1"
-        android:layout_marginTop="275dp"
-        android:layout_marginStart="21dp"
         app:layout_constraintStart_toStartOf="@+id/main_strock"
         app:layout_constraintTop_toTopOf="@+id/main_strock" />
 
@@ -220,13 +218,13 @@
         app:layout_constraintTop_toBottomOf="@+id/purpose4" />
 
     <ImageButton
-        android:id = "@+id/purpose6"
+        android:id="@+id/purpose6"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="340dp"
         android:backgroundTint="@color/white"
         android:src="@drawable/purpose1"
-        android:layout_marginTop="340dp"
-        android:layout_marginStart="21dp"
         app:layout_constraintStart_toStartOf="@+id/main_strock"
         app:layout_constraintTop_toTopOf="@+id/main_strock" />
 
@@ -253,5 +251,22 @@
         android:src="@drawable/purpose6_img"
         app:layout_constraintStart_toEndOf="@+id/textView12"
         app:layout_constraintTop_toBottomOf="@+id/purpose5" />
+
+    <ImageButton
+        android:id="@+id/signup_button"
+        android:layout_width="158dp"
+        android:layout_height="41dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerInside"
+        android:src="@drawable/okay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.974"
+        tools:ignore="TouchTargetSizeCheck" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
