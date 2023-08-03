@@ -164,10 +164,10 @@
             android:layout_marginTop="200dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:hint="    ex)남/여 입력"
+            android:hint="ex)남/여 입력"
             app:endIconMode="none">
 
-            <AutoCompleteTextView
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/male_female"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"

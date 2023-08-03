@@ -41,7 +41,7 @@ public class login2 extends AppCompatActivity {
         okbutton.setOnClickListener(new View.OnClickListener(){
 
             public void onClick(View view){
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), survey_1.class);
                 startActivity(intent);
             }
         });
