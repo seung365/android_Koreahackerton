@@ -20,7 +20,7 @@
             android:text="주소입력"
             android:textSize="20sp"
             android:textColor="@color/black"/>
-        
+
         <EditText
             android:id="@+id/et_address"
             android:layout_width="match_parent"
