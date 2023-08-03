@@ -1,15 +1,306 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <ImageButton
-        android:id="@+id/loginButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:background="#00FFFFFF"
-        android:contentDescription="@string/app_name"
-        android:src="@drawable/button"
-        tools:ignore="MissingConstraints" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="1000dp"
+        android:background="#FFFFFF"
+        android:padding="16dp">
+
+
+        <TextView
+            android:id="@+id/newperson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:fontFamily="@font/aninormal"
+            android:text="회원가입"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.391"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="142dp"
+            android:layout_height="121dp"
+            android:layout_marginStart="92dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/newperson"
+            app:srcCompat="@drawable/logining"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="-12dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/namefield"
+            android:layout_width="166dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="124dp"
+            android:hint="김한국"
+            app:endIconMode="none"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:fontFamily="@font/aninormal"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textSize="12sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aninormal"
+            android:text="별명"
+            android:textSize="15sp"
+
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@+id/nicknamefield"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.583"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nicknamefield"
+            android:layout_width="166dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="124dp"
+            android:layout_marginEnd="28dp"
+            android:hint="한국돌이"
+            app:endIconMode="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.451"
+            app:layout_constraintStart_toEndOf="@+id/namefield"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="156dp"
+                android:layout_height="50dp"
+                android:fontFamily="@font/aninormal"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textSize="12sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aninormal"
+            android:text="이름"
+            android:textSize="15sp"
+
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@+id/namefield"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.045"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/nickname3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:fontFamily="@font/aninormal"
+            android:text="아이디"
+
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@+id/login_id_Field"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.038"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/nickname6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aninormal"
+            android:text="비밀번호"
+
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@+id/login_pw_field"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.046"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/login_id_Field"
+            android:layout_width="338dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="112dp"
+            android:hint="Cppva"
+            app:endIconMode="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.471"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newperson">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:fontFamily="@font/aninormal"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textSize="12sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/login_pw_field"
+            android:layout_width="330dp"
+            android:layout_height="66dp"
+            android:layout_marginTop="288dp"
+            android:hint="12**"
+            app:endIconMode="password_toggle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Password"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:fontFamily="@font/aninormal"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:textSize="12sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/login_mail_Field"
+            android:layout_width="327dp"
+            android:layout_height="67dp"
+            android:layout_marginTop="288dp"
+            android:hint="abc123@naver.com"
+            app:endIconMode="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.384"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newperson">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:fontFamily="@font/aninormal"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textSize="12sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="280dp"
+
+            android:fontFamily="@font/aninormal"
+            android:maxLines="1"
+            android:text="이메일"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@+id/login_mail_Field"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.051"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newperson"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/login_telefield"
+            android:layout_width="327dp"
+            android:layout_height="67dp"
+            android:layout_marginTop="396dp"
+            android:hint="010-1234-5678"
+            app:endIconMode="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.403"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newperson">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+
+                android:fontFamily="@font/aninormal"
+                android:inputType="text"
+                android:textSize="12sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="32dp"
+            android:fontFamily="@font/aninormal"
+            android:maxLines="1"
+            android:text="주소"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@+id/login_add_field"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/telephone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/aninormal"
+            android:maxLines="1"
+            android:text="전화번호"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@+id/login_telefield"
+            app:layout_constraintStart_toStartOf="parent" />
+        <!-- 기존 코드 생략 -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/login_add_field"
+            android:layout_width="330dp"
+            android:layout_height="66dp"
+            android:layout_marginTop="584dp"
+            android:hint="울산시 울주군"
+            app:endIconMode="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:fontFamily="@font/aninormal"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textSize="12sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <!-- 기존 코드 생략 -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
