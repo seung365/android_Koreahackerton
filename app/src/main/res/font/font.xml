@@ -15,4 +15,19 @@
         android:fontWeight="400"
         android:font="@font/aninormal"/>
 
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/gmarketsansttfbold"/>
+
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/gmarketsansttflight"/>
+
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/gmarketsansttfmedium"/>
+
 </font-family>
