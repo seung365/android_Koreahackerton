@@ -2,6 +2,7 @@ package com.example.dabaewo1;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -32,13 +33,14 @@ public class searchActivity extends AppCompatActivity {
 
     private class BridgeInterFace {
         @JavascriptInterface
-        public void processData(String data) {
-            // 다음 주소 검색 API의 결과 값을 브릿지 통로를 통해 전달 받음
-            // 여기서 주소를 클릭했을 때 처리를 수행하고 액티비티를 닫습니다.
+        public void processDATA(String data) {
+            // 주소 검색 API의 결과 값을 받아온다.
+            // 해당 데이터를 Intent로 넘겨서 액티비티를 닫도록 처리합니다.
             Intent intent = new Intent();
             intent.putExtra("data", data);
             setResult(RESULT_OK, intent);
             finish();
         }
     }
+
 }

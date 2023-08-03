@@ -40,7 +40,7 @@ public class login2 extends AppCompatActivity {
             String address = data.getStringExtra("data");
             // 여기서 주소 검색 결과 처리
             EditText editText = loginAddField.getEditText();
-            if (editText != null) {
+            if (editText != null && address != null && !address.isEmpty()) {
                 editText.setText(address);
             }
         }
