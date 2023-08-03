@@ -7,6 +7,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -35,7 +36,17 @@ public class login2 extends AppCompatActivity {
                 }
             }
         });
+
+        ImageButton okbutton = (ImageButton) findViewById(R.id.signup_button);
+        okbutton.setOnClickListener(new View.OnClickListener(){
+
+            public void onClick(View view){
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -48,4 +59,6 @@ public class login2 extends AppCompatActivity {
             }
         }
     }
+
+
 }

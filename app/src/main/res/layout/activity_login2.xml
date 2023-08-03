@@ -149,7 +149,7 @@
             android:layout_marginTop="200dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:hint="성별을 선택해주세요"
+            android:hint="    성별을 선택해주세요"
             app:endIconMode="none">
 
             <AutoCompleteTextView
@@ -321,6 +321,17 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <ImageButton
+            android:id="@+id/signup_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:layout_marginTop="680dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/signup_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <!-- 기존 코드 생략 -->
 
