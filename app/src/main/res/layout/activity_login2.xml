@@ -141,6 +141,21 @@
             app:layout_constraintHorizontal_bias="0.046"
             app:layout_constraintStart_toStartOf="parent" />
 
+        <TextView
+            android:id="@+id/nickname7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aninormal"
+            android:text="성별"
+
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@+id/gender"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.046"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/gender"
             android:layout_width="match_parent"
@@ -149,7 +164,7 @@
             android:layout_marginTop="200dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:hint="    성별을 선택해주세요"
+            android:hint="    ex)남/여 입력"
             app:endIconMode="none">
 
             <AutoCompleteTextView
@@ -253,7 +268,7 @@
             android:layout_width="340dp"
             android:layout_height="65dp"
             android:layout_marginStart="4dp"
-            android:layout_marginTop="520dp"
+            android:layout_marginTop="530dp"
             android:hint="010-1234-5678"
             app:endIconMode="none"
             app:layout_constraintHorizontal_bias="0.403"
@@ -303,7 +318,7 @@
             android:layout_width="340dp"
             android:layout_height="65dp"
             android:layout_marginStart="4dp"
-            android:layout_marginTop="600dp"
+            android:layout_marginTop="610dp"
             android:hint="울산시 울주군"
             app:endIconMode="none"
             app:layout_constraintHorizontal_bias="0.489"
@@ -326,7 +341,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#00FFFFFF"
-            android:layout_marginTop="680dp"
+            android:layout_marginTop="690dp"
             android:contentDescription="@string/app_name"
             android:src="@drawable/signup_button"
             app:layout_constraintEnd_toEndOf="parent"
