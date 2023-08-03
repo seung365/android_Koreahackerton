@@ -25,23 +25,10 @@ public class searchAddress extends AppCompatActivity {
         loginAddField = findViewById(R.id.login_add_field);
         mEdtAddress = loginAddField.getEditText(); // TextInputLayout에서 EditText를 가져옵니다.
 
-        // login_add_field 클릭 시 주소 검색 웹뷰 화면으로 이동합니다.
-        loginAddField.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(searchAddress.this, searchActivity.class);
-                getSearchResult.launch(intent);
-            }
-        });
+        Intent intent = new Intent(searchAddress.this, searchActivity.class);
+        getSearchResult.launch(intent);
 
-        // EditText 외의 다른 부분을 클릭 시에도 주소 검색 웹뷰 화면으로 이동합니다.
-        loginAddField.getEditText().setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(searchAddress.this, searchActivity.class);
-                getSearchResult.launch(intent);
-            }
-        });
+
     }
 
     private final ActivityResultLauncher<Intent> getSearchResult = registerForActivityResult(
