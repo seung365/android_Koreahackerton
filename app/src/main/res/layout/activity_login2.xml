@@ -190,6 +190,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/id"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:fontFamily="@font/aninormal"
@@ -235,6 +236,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/e_mail"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:fontFamily="@font/aninormal"
