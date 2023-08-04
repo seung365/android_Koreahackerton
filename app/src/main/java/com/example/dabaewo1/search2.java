@@ -55,7 +55,7 @@ public class search2 extends AppCompatActivity {
             if(id == R.id.loginButton){ // loginButton을 누른 경우
                 login();
             }
-            else if(id == R.id.textView7){  // 기존회원이 아닌경우, 회원가입하기를 누를 경우
+            else if(id == R.id.registButton){  // 기존회원이 아닌경우, 회원가입하기를 누를 경우
                 startRegisterActicity();
             }
         }
@@ -99,6 +99,10 @@ public class search2 extends AppCompatActivity {
         else{
             startToast("이메일과 패스워드를 입력하세요.");
         }
+    }
+
+    private void startToast(String msg){
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 }
 
