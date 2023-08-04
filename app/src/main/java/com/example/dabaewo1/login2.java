@@ -31,9 +31,6 @@ public class login2 extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login2);
 
-        //회원가입 버튼 눌렀을 때 로그 발생
-        findViewById(R.id.registButton).setOnClickListener(onClickListener);
-
         EditText btnSearchAddress = findViewById(R.id.add);
         btnSearchAddress.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             public void onFocusChange(View v, boolean gainFocus) {
@@ -64,12 +61,7 @@ public class login2 extends AppCompatActivity
         @Override
         public void onClick(View v)
         {
-            switch(v.getId())
-            {
-                case R.id.registButton:
-                    signUp();
-                    break;
-            }
+            if (v.getId() == R.id.signup_button) signUp();
         }
     };
     private void signUp()
