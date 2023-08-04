@@ -21,19 +21,12 @@ import com.google.android.material.textfield.TextInputLayout;
 
 public class survey_2 extends AppCompatActivity {
 
+    private int value;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_survey2);
 
-        ImageButton ok3button = (ImageButton) findViewById(R.id.signup_button);
-        ok3button.setOnClickListener(new View.OnClickListener(){
-
-            public void onClick(View view){
-                Intent intent = new Intent(getApplicationContext(), survey_3.class);
-                startActivity(intent);
-            }
-        });
 
 
 
@@ -41,8 +34,10 @@ public class survey_2 extends AppCompatActivity {
         bookButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int value = 0; // 원하는 값(예: 1)을 부여
+                value = 0; // 원하는 값(예: 1)을 부여
                 Log.d("ImageButtonClick", "ImageButton Clicked, Value: " + value);
+                Intent intent = new Intent(getApplicationContext(), survey_3.class);
+                startActivity(intent);
             }
         });
 
@@ -50,8 +45,10 @@ public class survey_2 extends AppCompatActivity {
         readingbookbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int value = 1; // 원하는 값(예: 1)을 부여
+                value = 1; // 원하는 값(예: 1)을 부여
                 Log.d("ImageButtonClick", "ImageButton Clicked, Value: " + value);
+                Intent intent = new Intent(getApplicationContext(), survey_3.class);
+                startActivity(intent);
             }
         });
 
@@ -59,8 +56,10 @@ public class survey_2 extends AppCompatActivity {
         smart_learnbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int value = 2; // 원하는 값(예: 1)을 부여
+                value = 2; // 원하는 값(예: 1)을 부여
                 Log.d("ImageButtonClick", "ImageButton Clicked, Value: " + value);
+                Intent intent = new Intent(getApplicationContext(), survey_3.class);
+                startActivity(intent);
             }
         });
 
@@ -68,8 +67,10 @@ public class survey_2 extends AppCompatActivity {
         sportsbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int value = 3; // 원하는 값(예: 1)을 부여
+                value = 3; // 원하는 값(예: 1)을 부여
                 Log.d("ImageButtonClick", "ImageButton Clicked, Value: " + value);
+                Intent intent = new Intent(getApplicationContext(), survey_3.class);
+                startActivity(intent);
             }
         });
 
@@ -77,8 +78,10 @@ public class survey_2 extends AppCompatActivity {
         paintingbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int value = 4; // 원하는 값(예: 1)을 부여
+                value = 4; // 원하는 값(예: 1)을 부여
                 Log.d("ImageButtonClick", "ImageButton Clicked, Value: " + value);
+                Intent intent = new Intent(getApplicationContext(), survey_3.class);
+                startActivity(intent);
             }
         });
 
@@ -86,8 +89,10 @@ public class survey_2 extends AppCompatActivity {
         musicbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int value = 5; // 원하는 값(예: 1)을 부여
+                value = 5; // 원하는 값(예: 1)을 부여
                 Log.d("ImageButtonClick", "ImageButton Clicked, Value: " + value);
+                Intent intent = new Intent(getApplicationContext(), survey_3.class);
+                startActivity(intent);
             }
         });
 
@@ -95,8 +100,10 @@ public class survey_2 extends AppCompatActivity {
         jobbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int value = 6; // 원하는 값(예: 1)을 부여
+                value = 6; // 원하는 값(예: 1)을 부여
                 Log.d("ImageButtonClick", "ImageButton Clicked, Value: " + value);
+                Intent intent = new Intent(getApplicationContext(), survey_3.class);
+                startActivity(intent);
             }
         });
 
@@ -106,8 +113,10 @@ public class survey_2 extends AppCompatActivity {
         cookingbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int value = 7; // 원하는 값(예: 1)을 부여
+               value = 7; // 원하는 값(예: 1)을 부여
                 Log.d("ImageButtonClick", "ImageButton Clicked, Value: " + value);
+                Intent intent = new Intent(getApplicationContext(), survey_3.class);
+                startActivity(intent);
             }
         });
 
@@ -115,8 +124,10 @@ public class survey_2 extends AppCompatActivity {
         chessbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int value = 8; // 원하는 값(예: 1)을 부여
+                value = 8; // 원하는 값(예: 1)을 부여
                 Log.d("ImageButtonClick", "ImageButton Clicked, Value: " + value);
+                Intent intent = new Intent(getApplicationContext(), survey_3.class);
+                startActivity(intent);
             }
         });
 

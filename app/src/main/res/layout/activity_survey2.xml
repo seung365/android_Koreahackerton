@@ -20,18 +20,18 @@
         app:layout_constraintVertical_bias="0.002"
         app:srcCompat="@drawable/survey_2_img" />
 
+
     <ImageView
         android:id="@+id/total_2"
         android:layout_width="386dp"
         android:layout_height="496dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.84"
+        app:layout_constraintVertical_bias="0.834"
         app:srcCompat="@drawable/total_2" />
-
 
     <ImageButton
         android:id="@+id/book_button"
@@ -174,7 +174,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="52dp"
         android:fontFamily="@font/aninormal"
         android:maxLines="1"
         android:text="관심분야 선택"
@@ -184,23 +184,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.217" />
-
-    <ImageButton
-        android:id="@+id/signup_button"
-        android:layout_width="158dp"
-        android:layout_height="41dp"
-        android:background="#00FFFFFF"
-        android:contentDescription="@string/app_name"
-        android:scaleType="centerInside"
-        android:src="@drawable/okay"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.991"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:layout_constraintVertical_bias="0.166" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

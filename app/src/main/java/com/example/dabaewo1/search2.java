@@ -30,6 +30,16 @@ public class search2 extends AppCompatActivity {
         setContentView(R.layout.activity_search2);
 
         TextView loginButton = findViewById(R.id.textView7);
+
+        ImageButton login = (ImageButton)findViewById(R.id.loginButton);
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // 화면 이동 코드를 여기에 작성
+                Intent intent = new Intent(getApplicationContext(), home_1.class);
+                startActivity(intent);
+            }
+        });
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

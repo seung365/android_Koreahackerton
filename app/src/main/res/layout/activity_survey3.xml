@@ -34,12 +34,15 @@
 
     <ImageButton
         android:id="@+id/main_strock"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="379dp"
+        android:layout_height="452dp"
         android:backgroundTint="@color/white"
         android:src="@drawable/main_strock"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="146dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/purpose_title"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
         android:id="@+id/purpose1"
@@ -86,7 +89,8 @@
         android:backgroundTint="@color/white"
         android:src="@drawable/purpose1"
         app:layout_constraintStart_toStartOf="@+id/main_strock"
-        app:layout_constraintTop_toTopOf="@+id/main_strock" />
+        app:layout_constraintTop_toTopOf="@+id/main_strock"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/textView8"
@@ -120,7 +124,8 @@
         android:backgroundTint="@color/white"
         android:src="@drawable/purpose1"
         app:layout_constraintStart_toStartOf="@+id/main_strock"
-        app:layout_constraintTop_toTopOf="@+id/main_strock" />
+        app:layout_constraintTop_toTopOf="@+id/main_strock"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/textView9"
@@ -191,7 +196,8 @@
         android:backgroundTint="@color/white"
         android:src="@drawable/purpose1"
         app:layout_constraintStart_toStartOf="@+id/main_strock"
-        app:layout_constraintTop_toTopOf="@+id/main_strock" />
+        app:layout_constraintTop_toTopOf="@+id/main_strock"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/textView11"
@@ -226,7 +232,8 @@
         android:backgroundTint="@color/white"
         android:src="@drawable/purpose1"
         app:layout_constraintStart_toStartOf="@+id/main_strock"
-        app:layout_constraintTop_toTopOf="@+id/main_strock" />
+        app:layout_constraintTop_toTopOf="@+id/main_strock"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/textView12"
@@ -251,22 +258,6 @@
         android:src="@drawable/purpose6_img"
         app:layout_constraintStart_toEndOf="@+id/textView12"
         app:layout_constraintTop_toBottomOf="@+id/purpose5" />
-
-    <ImageButton
-        android:id="@+id/signup_button"
-        android:layout_width="158dp"
-        android:layout_height="41dp"
-        android:background="#00FFFFFF"
-        android:contentDescription="@string/app_name"
-        android:scaleType="centerInside"
-        android:src="@drawable/okay"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.974"
-        tools:ignore="TouchTargetSizeCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

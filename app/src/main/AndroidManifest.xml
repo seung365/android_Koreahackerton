@@ -17,6 +17,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".home_1"
+            android:exported="false" />
+        <activity
             android:name=".survey_2"
             android:exported="false" />
         <activity
