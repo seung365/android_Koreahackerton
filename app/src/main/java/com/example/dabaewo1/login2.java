@@ -3,13 +3,18 @@ package com.example.dabaewo1;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
 public class login2 extends AppCompatActivity {
     private static final int REQUEST_SEARCH_ADDRESS = 1;
@@ -31,6 +36,15 @@ public class login2 extends AppCompatActivity {
                 }
             }
         });
+
+        ImageButton okbutton = (ImageButton) findViewById(R.id.signup_button);
+        okbutton.setOnClickListener(new View.OnClickListener(){
+
+            public void onClick(View view){
+                Intent intent = new Intent(getApplicationContext(), survey_1.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -44,4 +58,6 @@ public class login2 extends AppCompatActivity {
             }
         }
     }
+
+
 }

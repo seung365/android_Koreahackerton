@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".survey_3">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="165dp"
+        android:layout_height="133dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/survey3_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/purpose_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:fontFamily="@font/gmarketsansttfmedium"
+        android:text="강좌이용 목적선택"
+        android:textSize="27sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.183"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/main_strock"
+        android:layout_width="379dp"
+        android:layout_height="452dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/main_strock"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/purpose_title"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/purpose1"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/purpose1"
+        app:layout_constraintStart_toStartOf="@+id/main_strock"
+        app:layout_constraintTop_toTopOf="@+id/main_strock"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gmarketsansttflight"
+        android:text="새로운 일자리"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/purpose1"
+        app:layout_constraintEnd_toEndOf="@+id/purpose1"
+        app:layout_constraintHorizontal_bias="0.064"
+        app:layout_constraintStart_toStartOf="@+id/purpose1"
+        app:layout_constraintTop_toTopOf="@+id/purpose1"
+        app:layout_constraintVertical_bias="0.431" />
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/purpose1_img"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@+id/purpose1" />
+
+    <ImageButton
+        android:id="@+id/purpose2"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/purpose1"
+        app:layout_constraintStart_toStartOf="@+id/main_strock"
+        app:layout_constraintTop_toTopOf="@+id/main_strock"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gmarketsansttflight"
+        android:text="여가, 취미 활동"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/purpose2"
+        app:layout_constraintEnd_toEndOf="@+id/purpose2"
+        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintStart_toStartOf="@+id/purpose2"
+        app:layout_constraintTop_toTopOf="@+id/purpose2" />
+
+    <ImageView
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/purpose2_img"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/purpose1" />
+
+    <ImageButton
+        android:id="@+id/purpose3"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="145dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/purpose1"
+        app:layout_constraintStart_toStartOf="@+id/main_strock"
+        app:layout_constraintTop_toTopOf="@+id/main_strock"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gmarketsansttflight"
+        android:text="다양한 사람들과 함께하는 활동"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/purpose3"
+        app:layout_constraintEnd_toEndOf="@+id/purpose3"
+        app:layout_constraintHorizontal_bias="0.147"
+        app:layout_constraintStart_toStartOf="@+id/purpose3"
+        app:layout_constraintTop_toTopOf="@+id/purpose3"
+        app:layout_constraintVertical_bias="0.448" />
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/purpose3_img"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/purpose2" />
+
+    <ImageButton
+        android:id="@+id/purpose4"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="210dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/purpose1"
+        app:layout_constraintStart_toStartOf="@+id/main_strock"
+        app:layout_constraintTop_toTopOf="@+id/main_strock"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gmarketsansttflight"
+        android:text="전문성 있는 수업 수강"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/purpose4"
+        app:layout_constraintEnd_toEndOf="@+id/purpose4"
+        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintStart_toStartOf="@+id/purpose4"
+        app:layout_constraintTop_toTopOf="@+id/purpose4"
+        app:layout_constraintVertical_bias="0.448" />
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/purpose4_img"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/purpose3" />
+
+    <ImageButton
+        android:id="@+id/purpose5"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="275dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/purpose1"
+        app:layout_constraintStart_toStartOf="@+id/main_strock"
+        app:layout_constraintTop_toTopOf="@+id/main_strock"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gmarketsansttflight"
+        android:text="건강한 신체 관리"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/purpose5"
+        app:layout_constraintEnd_toEndOf="@+id/purpose5"
+        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintStart_toStartOf="@+id/purpose5"
+        app:layout_constraintTop_toTopOf="@+id/purpose5"
+        app:layout_constraintVertical_bias="0.431" />
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="3dp"
+        android:src="@drawable/purpose5_img"
+        app:layout_constraintStart_toEndOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/purpose4" />
+
+    <ImageButton
+        android:id="@+id/purpose6"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="340dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/purpose1"
+        app:layout_constraintStart_toStartOf="@+id/main_strock"
+        app:layout_constraintTop_toTopOf="@+id/main_strock"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gmarketsansttflight"
+        android:text="풍부한 문화 활동"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/purpose6"
+        app:layout_constraintEnd_toEndOf="@+id/purpose6"
+        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintStart_toStartOf="@+id/purpose6"
+        app:layout_constraintTop_toTopOf="@+id/purpose6"
+        app:layout_constraintVertical_bias="0.431" />
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/purpose6_img"
+        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/purpose5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
