@@ -27,7 +27,9 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class search2 extends AppCompatActivity {
 
+    //로그 남길 때 태그
     private static final String TAG = "serach2Activity";
+    //파이어베이스 인증 권한 선언인듯
     private FirebaseAuth mAuth;
     TextInputLayout textInputLayout;
     AutoCompleteTextView autoCompleteTextView;
@@ -37,22 +39,34 @@ public class search2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search2);
+        // 권한 가져오기
         mAuth = FirebaseAuth.getInstance();
+        //loginButton의 clicklistener 설정
         findViewById(R.id.loginButton).setOnClickListener(onClickListener);
     }
 
     View.OnClickListener onClickListener = new View.OnClickListener() {
+        //clicklistener 선언
+
         @Override
         public void onClick(View view) {
-            login();
+            //누른 아이템의 id 가져오기
+            int id = view.getId();
+            if(id == R.id.loginButton){ // loginButton을 누른 경우
+                login();
+            }
+            else if(id == R.id.textView7){  // 기존회원이 아닌경우, 회원가입하기를 누를 경우
+                startRegisterActicity();
+            }
         }
     };
-    //    public void onTextView7Clicked(View view) {
-//        // 다른 화면으로 이동하는 코드 작성
-//        Intent intent = new Intent(this, com.example.dabaewo1.login2.class);
-//        startActivity(intent);
-//    }
+    //home화면으로 이동하는 함수
     private void startLoginActicity(){
+        Intent intent = new Intent(this, com.example.dabaewo1.home_1.class);
+        startActivity(intent);
+    }
+    //회원가입으로 이동하는 함수
+    private void startRegisterActicity(){
         Intent intent = new Intent(this, com.example.dabaewo1.login2.class);
         startActivity(intent);
     }
@@ -61,7 +75,8 @@ public class search2 extends AppCompatActivity {
         String email = ((TextInputLayout)findViewById(R.id.textField)).getEditText().getText().toString();
         String password = ((TextInputLayout)findViewById(R.id.textField2)).getEditText().getText().toString();
 
-        if(email.length() > 0 && password.length() > 0){
+
+        if(email.length() > 0 && password.length() > 0){ // 이메일 비번 안적었을 때
             mAuth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                         @Override
@@ -85,6 +100,8 @@ public class search2 extends AppCompatActivity {
             startToast("이메일과 패스워드를 입력하세요.");
         }
     }
+    private void startToast(String msg){
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 }
 
