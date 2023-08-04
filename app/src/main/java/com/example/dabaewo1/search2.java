@@ -100,8 +100,6 @@ public class search2 extends AppCompatActivity {
             startToast("이메일과 패스워드를 입력하세요.");
         }
     }
-    private void startToast(String msg){
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
-    }
 }
+
 
