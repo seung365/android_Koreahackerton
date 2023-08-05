@@ -47,8 +47,7 @@ public class login2 extends AppCompatActivity
         okbutton.setOnClickListener(new View.OnClickListener(){
 
             public void onClick(View view){
-                Intent intent = new Intent(getApplicationContext(), survey_1.class);
-                startActivity(intent);
+                if (view.getId() == R.id.signup_button) signUp();
             }
         });
     }
@@ -56,14 +55,6 @@ public class login2 extends AppCompatActivity
     // 회원가입 기능.
 
     //회원가입 버튼 리스너
-    View.OnClickListener onClickListener = new View.OnClickListener()
-    {
-        @Override
-        public void onClick(View v)
-        {
-            if (v.getId() == R.id.signup_button) signUp();
-        }
-    };
     private void signUp()
     {
         String name = ((TextInputLayout)findViewById(R.id.namefield)).getEditText().getText().toString();
@@ -83,6 +74,8 @@ public class login2 extends AppCompatActivity
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "회원 가입에 성공했습니다.");
                             FirebaseUser user = mAuth.getCurrentUser();
+                            Intent intent = new Intent(getApplicationContext(), survey_1.class);
+                            startActivity(intent);
                             // 성공시 updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.

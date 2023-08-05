@@ -55,9 +55,6 @@ public class search2 extends AppCompatActivity {
             if(id == R.id.loginButton){ // loginButton을 누른 경우
                 login();
             }
-            else if(id == R.id.registButton){  // 기존회원이 아닌경우, 회원가입하기를 누를 경우
-                startRegisterActicity();
-            }
         }
     };
     //home화면으로 이동하는 함수
@@ -65,12 +62,17 @@ public class search2 extends AppCompatActivity {
         Intent intent = new Intent(this, com.example.dabaewo1.home_1.class);
         startActivity(intent);
     }
-    //회원가입으로 이동하는 함수
-    private void startRegisterActicity(){
+//    //회원가입으로 이동하는 함수
+//    private void startRegisterActicity(){
+//        Intent intent = new Intent(this, com.example.dabaewo1.login2.class);
+//        startActivity(intent);
+//    }
+
+    public void onTextView7Clicked(View view) {
+        // 다른 화면으로 이동하는 코드 작성
         Intent intent = new Intent(this, com.example.dabaewo1.login2.class);
         startActivity(intent);
     }
-
     private void login(){
         String email = ((TextInputLayout)findViewById(R.id.textField)).getEditText().getText().toString();
         String password = ((TextInputLayout)findViewById(R.id.textField2)).getEditText().getText().toString();
@@ -105,5 +107,3 @@ public class search2 extends AppCompatActivity {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 }
-
-
