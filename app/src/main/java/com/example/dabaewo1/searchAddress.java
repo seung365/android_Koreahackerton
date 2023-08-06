@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.dabaewo1.searchActivity;
 import com.google.android.material.textfield.TextInputLayout;
@@ -25,9 +26,9 @@ public class searchAddress extends AppCompatActivity {
         loginAddField = findViewById(R.id.login_add_field);
         mEdtAddress = loginAddField.getEditText(); // TextInputLayout에서 EditText를 가져옵니다.
 
+
         Intent intent = new Intent(searchAddress.this, searchActivity.class);
         getSearchResult.launch(intent);
-
 
     }
 
@@ -37,12 +38,19 @@ public class searchAddress extends AppCompatActivity {
                 // SearchActivity로부터의 결과 값이 이곳으로 전달됩니다.
                 if (result.getResultCode() == RESULT_OK) {
                     if (result.getData() != null) {
-                        String data = result.getData().getStringExtra("data");
+                        String data = result.getData().getStringExtra("address");
                         if (data != null && !data.isEmpty()) {
-                            mEdtAddress.setText(data); // EditText에 주소를 설정합니다.
+                            Intent intent = new Intent();
+                            intent.putExtra("address", data);
+                            setResult(RESULT_OK, intent);
+                            finish();
                         }
                     }
                 }
             }
     );
-}
+
+    private void startToast(String msg){
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+    }
+
