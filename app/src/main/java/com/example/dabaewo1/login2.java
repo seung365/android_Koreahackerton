@@ -15,12 +15,15 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class login2 extends AppCompatActivity
 {
@@ -93,6 +96,7 @@ public class login2 extends AppCompatActivity
                                 // Sign in success, update UI with the signed-in user's information
                                 startToast("회원가입 성공");
                                 FirebaseUser user = mAuth.getCurrentUser();
+                                updateUser(name, nickname, email, gender, phoneNumber, address);
                                 startsurveyActicity();
                                 // 성공시 updateUI(user);
                             } else {
@@ -122,6 +126,39 @@ public class login2 extends AppCompatActivity
                 }
             }
     );
+    public void updateUser(String name, String nickname, String email, String gender, String phoneNumber, String address)
+    {
+        if (name.length() > 0 && phoneNumber.length() > 9 && email.length() > 0 && address.length() > 0)
+        {
+            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+            FirebaseFirestore db = FirebaseFirestore.getInstance(); //fireStore 초기화
+            UserInfo userinfo = new UserInfo(name, nickname, email, gender, phoneNumber, address);
+            if (user != null)
+            {
+                db.collection("users").document(user.getUid()).set(userinfo)
+                        .addOnSuccessListener(new OnSuccessListener<Void>()
+                        {
+                            @Override
+                            public void onSuccess(Void aVoid)
+                            {
+                                startToast("회원정보 등록을 성공하였습니다.");
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener()
+                        {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Log.w(TAG, "Error adding document", e);
+                                startToast("회원정보 등록에 실패했습니다.");
+                            }
+                        });
+            }
+        }
+        else
+        {
+            startToast("회원정보를 입력해주세요.");
+        }
+    }
     private void startToast(String msg){
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
