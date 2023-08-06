@@ -37,10 +37,11 @@ public class searchActivity extends AppCompatActivity {
             // 주소 검색 API의 결과 값을 받아온다.
             // 해당 데이터를 Intent로 넘겨서 액티비티를 닫도록 처리합니다.
             Intent intent = new Intent();
-            intent.putExtra("data", data);
+            intent.putExtra("address", data);
             setResult(RESULT_OK, intent);
             finish();
         }
+
     }
 }
 
