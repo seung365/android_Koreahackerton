@@ -50,7 +50,7 @@ public class searchAddress extends AppCompatActivity {
             }
     );
 
-    private void startToast(String msg){
+    private void startToast(String msg) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
-
+}
