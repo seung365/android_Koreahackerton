@@ -27,6 +27,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class login2 extends AppCompatActivity
 {
+    //Tag
     private static final String TAG = "login2Activity";
     private static final int REQUEST_SEARCH_ADDRESS = 1;
     private TextInputEditText loginAddField;
