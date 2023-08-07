@@ -40,6 +40,7 @@ public class login2 extends AppCompatActivity
     private String id;
     private String phoneNumber;
     private String address;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -62,7 +63,6 @@ public class login2 extends AppCompatActivity
 
             public void onClick(View view){
                 if (view.getId() == R.id.signup_button) {
-                    startToast("클릭");
                     signUp();
                 }
             }
@@ -70,8 +70,14 @@ public class login2 extends AppCompatActivity
     }
 
 
-    private void startsurveyActicity(){
+    private void startsurveyActivity(){
         Intent intent = new Intent(this, survey_1.class);
+        intent.putExtra("name", name);
+        intent.putExtra("nickname", nickname);
+        intent.putExtra("email", email);
+        intent.putExtra("gender", gender);
+        intent.putExtra("phoneNumber", phoneNumber);
+        intent.putExtra("address", address);
         startActivity(intent);
     }
     // 회원가입 기능.
@@ -88,7 +94,7 @@ public class login2 extends AppCompatActivity
         phoneNumber = ((TextInputLayout) findViewById(R.id.login_telefield)).getEditText().getText().toString();
         address = ((TextInputLayout) findViewById(R.id.login_add_field)).getEditText().getText().toString();
 
-        if(id.length() > 0 && password.length() > 0){ // 이메일 비번 안적었을 때
+        if(id.length() > 0 && password.length() > 0 && name.length() > 0 && phoneNumber.length() > 9 && email.length() > 0 && address.length() > 0){ // 이메일 비번 안적었을 때
             mAuth.createUserWithEmailAndPassword(id, password)
                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                         @Override
@@ -97,9 +103,7 @@ public class login2 extends AppCompatActivity
                                 // Sign in success, update UI with the signed-in user's information
                                 startToast("회원가입 성공");
                                 FirebaseUser user = mAuth.getCurrentUser();
-                                updateUser(name, nickname, email, gender, phoneNumber, address);
-                                startsurveyActicity();
-                                // 성공시 updateUI(user);
+                                startsurveyActivity();
                             } else {
                                 // If sign in fails, display a message to the user.
                                 Log.w(TAG, "회원가입 실패", task.getException());
@@ -109,7 +113,7 @@ public class login2 extends AppCompatActivity
                     });
         }
         else{
-            startToast("id과 패스워드를 입력하세요.");
+            startToast("회원정보를 올바르게 입력해주세요.");
         }
     }
 
@@ -119,7 +123,7 @@ public class login2 extends AppCompatActivity
                 // SearchActivity로부터의 결과 값이 이곳으로 전달됩니다.
                 if (result.getResultCode() == RESULT_OK) {
                     if (result.getData() != null) {
-                        String data = result.getData().getStringExtra("address");
+                        String data = result.getData().getStringExtra("data");
                         if (data != null && !data.isEmpty()) {
                             ((TextInputLayout) findViewById(R.id.login_add_field)).getEditText().setText(data); // EditText에 주소를 설정합니다.
                         }
@@ -127,39 +131,6 @@ public class login2 extends AppCompatActivity
                 }
             }
     );
-    public void updateUser(String name, String nickname, String email, String gender, String phoneNumber, String address)
-    {
-        if (name.length() > 0 && phoneNumber.length() > 9 && email.length() > 0 && address.length() > 0)
-        {
-            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-            FirebaseFirestore db = FirebaseFirestore.getInstance(); //fireStore 초기화
-            UserInfo userinfo = new UserInfo(name, nickname, email, gender, phoneNumber, address);
-            if (user != null)
-            {
-                db.collection("users").document(user.getUid()).set(userinfo)
-                        .addOnSuccessListener(new OnSuccessListener<Void>()
-                        {
-                            @Override
-                            public void onSuccess(Void aVoid)
-                            {
-                                startToast("회원정보 등록을 성공하였습니다.");
-                            }
-                        })
-                        .addOnFailureListener(new OnFailureListener()
-                        {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                Log.w(TAG, "Error adding document", e);
-                                startToast("회원정보 등록에 실패했습니다.");
-                            }
-                        });
-            }
-        }
-        else
-        {
-            startToast("회원정보를 입력해주세요.");
-        }
-    }
     private void startToast(String msg){
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }

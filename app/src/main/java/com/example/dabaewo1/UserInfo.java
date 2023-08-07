@@ -9,13 +9,20 @@ public class UserInfo {
     private String phoneNumber;
     private String address;
 
-    public UserInfo(String name, String nickname, String email, String gender, String phoneNumber, String address){
+    private int job;
+    private int interest;
+    private int purpose;
+
+    public UserInfo(String name, String nickname, String email, String gender, String phoneNumber, String address, int job, int interest, int purpose){
         this.name = name;
         this.nickname = nickname;
         this.email = email;
         this.gender = gender;
         this.phoneNumber = phoneNumber;
         this.address = address;
+        this.job = job;
+        this.interest = interest;
+        this.purpose = purpose;
     }
     public String getName(){
         return this.name;
@@ -52,6 +59,24 @@ public class UserInfo {
     }
     public void setAddress(String address){
         this.address = address;
+    }
+    public int getJob(){
+        return this.job;
+    }
+    public void setJob(int job){
+        this.job = job;
+    }
+    public int getInterest() {
+        return this.interest;
+    }
+    public void setInterest(int interest){
+        this.interest = interest;
+    }
+    public int getPurpose(){
+        return this.purpose;
+    }
+    public void setPurpose(int purpose){
+        this.purpose = purpose;
     }
 }
 

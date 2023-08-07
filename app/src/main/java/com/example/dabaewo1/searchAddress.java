@@ -38,10 +38,10 @@ public class searchAddress extends AppCompatActivity {
                 // SearchActivity로부터의 결과 값이 이곳으로 전달됩니다.
                 if (result.getResultCode() == RESULT_OK) {
                     if (result.getData() != null) {
-                        String data = result.getData().getStringExtra("address");
+                        String data = result.getData().getStringExtra("data");
                         if (data != null && !data.isEmpty()) {
                             Intent intent = new Intent();
-                            intent.putExtra("address", data);
+                            intent.putExtra("data", data);
                             setResult(RESULT_OK, intent);
                             finish();
                         }
