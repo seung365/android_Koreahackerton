@@ -111,7 +111,7 @@ public class survey_1 extends AppCompatActivity {
         soldierbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              value = 7; // 원하는 값(예: 1)을 부여
+                value = 7; // 원하는 값(예: 1)을 부여
                 Log.d("ImageButtonClick", "ImageButton Clicked, Value: " + value);
                 Intent intent = new Intent(getApplicationContext(), survey_2.class);
                 startActivity(intent);
