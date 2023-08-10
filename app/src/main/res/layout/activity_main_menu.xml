@@ -21,6 +21,6 @@
         app:itemTextColor="@drawable/menu_item_color"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/navigation_menu"/>
+        app:menu="@menu/main_menu_butttom"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,13 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".mainmypage">
+    tools:context=".MainMenuReserveFragment">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="마이페이지"
+        android:text="예약"
         android:textColor="@android:color/black"
         android:textSize="50sp"/>
 
