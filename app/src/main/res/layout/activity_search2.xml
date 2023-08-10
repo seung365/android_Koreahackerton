@@ -21,7 +21,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="306dp"
             android:layout_height="wrap_content"
-            android:inputType="textPassword" />
+            android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
