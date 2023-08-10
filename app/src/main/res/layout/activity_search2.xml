@@ -20,8 +20,8 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="306dp"
-            android:layout_height="48dp"
-            android:inputType="textPassword" />
+            android:layout_height="wrap_content"
+            android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -38,7 +38,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextTextPassword"
             android:layout_width="306dp"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
             android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>

@@ -59,7 +59,7 @@ public class search2 extends AppCompatActivity {
     };
     //home화면으로 이동하는 함수
     private void startLoginActicity(){
-        Intent intent = new Intent(this, com.example.dabaewo1.home_1.class);
+        Intent intent = new Intent(this, com.example.dabaewo1.MainMenuActivity.class);
         startActivity(intent);
     }
 //    //회원가입으로 이동하는 함수

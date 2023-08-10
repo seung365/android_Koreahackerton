@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.CustomBottomNavigationView"
+        parent="@style/Widget.Design.BottomNavigationView">
+        <item name="fontFamily">@font/aninormal</item>
+        <item name="android:minHeight">0dp</item>
+        <!-- 다른 속성들 -->
+    </style>
+
+</resources>
