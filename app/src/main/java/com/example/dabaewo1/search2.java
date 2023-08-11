@@ -1,22 +1,17 @@
 package com.example.dabaewo1;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
-import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.dabaewo1.R;
+import com.example.dabaewo1.fragment.MainMenuActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
@@ -59,7 +54,7 @@ public class search2 extends AppCompatActivity {
     };
     //home화면으로 이동하는 함수
     private void startLoginActicity(){
-        Intent intent = new Intent(this, com.example.dabaewo1.MainMenuActivity.class);
+        Intent intent = new Intent(this, MainMenuActivity.class);
         startActivity(intent);
     }
 //    //회원가입으로 이동하는 함수
