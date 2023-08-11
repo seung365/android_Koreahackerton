@@ -1,4 +1,4 @@
-package com.example.dabaewo1;
+package com.example.dabaewo1.fragment;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -8,6 +8,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.dabaewo1.R;
+import com.example.dabaewo1.fragment.MainMenuHomeFragment;
+import com.example.dabaewo1.fragment.MainMenuMypageFragment;
+import com.example.dabaewo1.fragment.MainMenuReserveFragment;
+import com.example.dabaewo1.fragment.MainMenuSearchFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainMenuActivity extends AppCompatActivity {

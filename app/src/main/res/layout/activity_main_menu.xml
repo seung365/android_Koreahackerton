@@ -5,13 +5,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainMenuActivity">
+    tools:context=".fragment.MainMenuActivity">
 
     <FrameLayout
         android:id="@+id/menu_frame_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="?attr/actionBarSize"/>
+        android:layout_marginBottom="?attr/actionBarSize">
+
+
+
+
+    </FrameLayout>
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/menu_bottom_navigation"
@@ -25,5 +31,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/main_menu_butttom"
         />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

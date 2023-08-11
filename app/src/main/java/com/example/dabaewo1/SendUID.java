@@ -1,3 +1,4 @@
+package com.example.dabaewo1;
 import android.os.Bundle;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
@@ -22,7 +23,7 @@ public class SendUID extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
 
-        webView = findViewById(R.id.webView);
+        //webView = findViewById(R.id.textView);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
         webView.setWebChromeClient(new WebChromeClient());
