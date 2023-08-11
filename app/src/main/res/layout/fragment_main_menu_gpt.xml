@@ -8,42 +8,20 @@
 
 
 
-    <EditText
-        android:id="@+id/text_input"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="입력하면 출력 됩니다."
-        android:textAlignment="center"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"/>
-
-    <Button
-        android:id="@+id/button_text01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Print"
-        app:layout_constraintTop_toBottomOf="@+id/text_input"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
-
     <TextView
         android:id="@+id/text_output"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:hint="출력 됩니다."
-        android:textSize="30sp"
         android:textAlignment="center"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_text01"
-        android:layout_marginTop="30dp"/>
-
-
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.295" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
