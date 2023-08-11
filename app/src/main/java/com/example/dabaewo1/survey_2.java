@@ -13,8 +13,6 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -24,14 +22,6 @@ import com.google.android.material.textfield.TextInputLayout;
 public class survey_2 extends AppCompatActivity {
 
     private int value;
-    private String name;
-    private String nickname;
-    private String email;
-    private String gender;
-    private String phoneNumber;
-    private String address;
-    private int job;
-    private Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,71 +29,114 @@ public class survey_2 extends AppCompatActivity {
 
 
 
-        intent = getIntent();
-        name = intent.getStringExtra("name");
-        nickname = intent.getStringExtra("nickname");
-        email = intent.getStringExtra("email");
-        gender = intent.getStringExtra("gender");
-        phoneNumber = intent.getStringExtra("phoneNumber");
-        address = intent.getStringExtra("address");
-        job = intent.getIntExtra("job", 0);
-        findViewById(R.id.book_button).setOnClickListener(onClickListener);
-        findViewById(R.id.readingbook_button).setOnClickListener(onClickListener);
-        findViewById(R.id.smart_learn_button).setOnClickListener(onClickListener);
-        findViewById(R.id.sports_button).setOnClickListener(onClickListener);
-        findViewById(R.id.painting_button).setOnClickListener(onClickListener);
-        findViewById(R.id.music_button).setOnClickListener(onClickListener);
-        findViewById(R.id.job_button).setOnClickListener(onClickListener);
-        findViewById(R.id.cooking_button).setOnClickListener(onClickListener);
-        findViewById(R.id.chess_button).setOnClickListener(onClickListener);
-    }
 
-    View.OnClickListener onClickListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            int id = v.getId();
-            if(id == R.id.book_button){
-                value = 0;
+        ImageButton bookButton = findViewById(R.id.book_button);
+        bookButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                value = 0; // 원하는 값(예: 1)을 부여
+                Log.d("ImageButtonClick", "ImageButton Clicked, Value: " + value);
+                Intent intent = new Intent(getApplicationContext(), survey_3.class);
+                startActivity(intent);
             }
-            else if(id == R.id.readingbook_button){
-                value = 1;
+        });
+
+        ImageButton readingbookbutton = findViewById(R.id.readingbook_button);
+        readingbookbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                value = 1; // 원하는 값(예: 1)을 부여
+                Log.d("ImageButtonClick", "ImageButton Clicked, Value: " + value);
+                Intent intent = new Intent(getApplicationContext(), survey_3.class);
+                startActivity(intent);
             }
-            else if(id == R.id.smart_learn_button){
-                value = 2;
+        });
+
+        ImageButton smart_learnbutton = findViewById(R.id.smart_learn_button);
+        smart_learnbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                value = 2; // 원하는 값(예: 1)을 부여
+                Log.d("ImageButtonClick", "ImageButton Clicked, Value: " + value);
+                Intent intent = new Intent(getApplicationContext(), survey_3.class);
+                startActivity(intent);
             }
-            else if(id == R.id.sports_button){
-                value = 3;
+        });
+
+        ImageButton sportsbutton = findViewById(R.id.sports_button);
+        sportsbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                value = 3; // 원하는 값(예: 1)을 부여
+                Log.d("ImageButtonClick", "ImageButton Clicked, Value: " + value);
+                Intent intent = new Intent(getApplicationContext(), survey_3.class);
+                startActivity(intent);
             }
-            else if(id == R.id.painting_button){
-                value = 4;
+        });
+
+        ImageButton paintingbutton = findViewById(R.id.painting_button);
+        paintingbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                value = 4; // 원하는 값(예: 1)을 부여
+                Log.d("ImageButtonClick", "ImageButton Clicked, Value: " + value);
+                Intent intent = new Intent(getApplicationContext(), survey_3.class);
+                startActivity(intent);
             }
-            else if(id == R.id.music_button){
-                value = 5;
+        });
+
+        ImageButton musicbutton = findViewById(R.id.music_button);
+        musicbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                value = 5; // 원하는 값(예: 1)을 부여
+                Log.d("ImageButtonClick", "ImageButton Clicked, Value: " + value);
+                Intent intent = new Intent(getApplicationContext(), survey_3.class);
+                startActivity(intent);
             }
-            else if(id == R.id.job_button){
-                value = 6;
+        });
+
+        ImageButton jobbutton = findViewById(R.id.job_button);
+        jobbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                value = 6; // 원하는 값(예: 1)을 부여
+                Log.d("ImageButtonClick", "ImageButton Clicked, Value: " + value);
+                Intent intent = new Intent(getApplicationContext(), survey_3.class);
+                startActivity(intent);
             }
-            else if(id == R.id.cooking_button){
-                value = 7;
+        });
+
+
+
+        ImageButton cookingbutton = findViewById(R.id.cooking_button);
+        cookingbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               value = 7; // 원하는 값(예: 1)을 부여
+                Log.d("ImageButtonClick", "ImageButton Clicked, Value: " + value);
+                Intent intent = new Intent(getApplicationContext(), survey_3.class);
+                startActivity(intent);
             }
-            else if(id == R.id.chess_button){
-                value = 8;
+        });
+
+        ImageButton chessbutton = findViewById(R.id.chess_button);
+        chessbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                value = 8; // 원하는 값(예: 1)을 부여
+                Log.d("ImageButtonClick", "ImageButton Clicked, Value: " + value);
+                Intent intent = new Intent(getApplicationContext(), survey_3.class);
+                startActivity(intent);
             }
-            Intent intent2 = new Intent(survey_2.this, survey_3.class);
-            if(name != null){
-                intent2.putExtra("name", name);
-                intent2.putExtra("nickname", nickname);
-                intent2.putExtra("email", email);
-                intent2.putExtra("gender", gender);
-                intent2.putExtra("phoneNumber", phoneNumber);
-                intent2.putExtra("address", address);
-                intent2.putExtra("job", job);
-                intent2.putExtra("interest", value);
-            }
-            startActivity(intent2);
-        }
-    };
-    private void startToast(String msg){
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+        });
+
+
+
+
+
+
+
+
     }
 }
