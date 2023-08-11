@@ -31,7 +31,7 @@ public class MainMenuGptFragment extends Fragment {
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
 
-        webView = findViewById(R.id.webView);
+        webView = rootView.findViewById(R.id.webView);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
         webView.setWebChromeClient(new WebChromeClient());
