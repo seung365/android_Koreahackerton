@@ -23,6 +23,7 @@ public class MainMenuGptFragment extends Fragment {
     private FirebaseAuth mAuth;
     private FirebaseUser user;
     private TextView displayTextView;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -30,6 +31,9 @@ public class MainMenuGptFragment extends Fragment {
 
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
+
+        displayTextView = rootView.findViewById(R.id.text_output); // TextView 초기화
+        displayTextView.setText("기본값"); // 기본값 설정
 
         webView = rootView.findViewById(R.id.webView);
         webView.getSettings().setJavaScriptEnabled(true);
@@ -46,21 +50,19 @@ public class MainMenuGptFragment extends Fragment {
         String dataToSend = user.getUid(); // user uid 가져오기
         String javascriptCommand = "javascript:recommandLecture('" + dataToSend + "')";
         webView.loadUrl(javascriptCommand);
-        displayTextView = rootView.findViewById(R.id.text_output);
+
         return rootView;
     }
 
     public class AppInterface {
         @JavascriptInterface
         public void dataToApp(String data) {
-            displayTextView.setText(data);
-           /* runOnUiThread(new Runnable() {
+            getActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    webView.loadUrl("javascript:handleResultFromApp('" + data + "')");
+                    displayTextView.setText(data);
                 }
             });
-            */
         }
     }
 }
