@@ -18,7 +18,7 @@ public class SendUID extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        //setContentView(R.layout.activity_main);
 
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
@@ -29,7 +29,7 @@ public class SendUID extends AppCompatActivity {
         webView.setWebChromeClient(new WebChromeClient());
 
         // 웹 페이지 로드
-        webView.loadUrl("https://hackerton-f6788.web.app/contact.html");
+        webView.loadUrl("https://hackerton-f6788.web.app/chatGPT");
 
         // 웹 뷰와 네이티브 앱 간 데이터 통신을 위한 인터페이스 설정
         webView.addJavascriptInterface(new AppInterface(), "dabae");

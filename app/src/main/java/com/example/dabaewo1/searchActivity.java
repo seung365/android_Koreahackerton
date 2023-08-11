@@ -28,7 +28,7 @@ public class searchActivity extends AppCompatActivity {
             }
         });
 
-        webView.loadUrl("https://hackerton-f6788.firebaseapp.com");
+        webView.loadUrl("https://hackerton-f6788.web.app/index");
     }
 
     private class BridgeInterFace {
@@ -41,6 +41,5 @@ public class searchActivity extends AppCompatActivity {
             setResult(RESULT_OK, intent);
             finish();
         }
-
     }
 }
