@@ -17,7 +17,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".fragment.MainmenuGptFragment"
+            android:name=".fragment.MainMenuGptFragment"
             android:exported="false" />
         <activity
             android:name=".gpt_1"

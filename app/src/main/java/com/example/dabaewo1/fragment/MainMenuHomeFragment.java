@@ -8,10 +8,13 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import com.example.dabaewo1.R;
 import com.example.dabaewo1.fragment.*;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class MainMenuHomeFragment extends Fragment {
 
     private FragmentManager fragmentManager;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
