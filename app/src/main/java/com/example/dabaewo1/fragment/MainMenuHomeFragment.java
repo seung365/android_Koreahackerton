@@ -25,14 +25,14 @@ public class MainMenuHomeFragment extends Fragment {
 
         fragmentManager = requireActivity().getSupportFragmentManager();
 
-        rootView.findViewById(R.id.btn_gpt).setOnClickListener(new View.OnClickListener() {
+     /*   rootView.findViewById(R.id.btn_gpt).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
                 transaction.replace(R.id.menu_frame_layout, new MainMenuGptFragment()).commit();
             }
         });
-
+*/
         return rootView;
     }
 }

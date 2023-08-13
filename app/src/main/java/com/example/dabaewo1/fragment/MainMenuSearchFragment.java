@@ -1,99 +1,72 @@
 package com.example.dabaewo1.fragment;
 
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.widget.ListView;
-import android.view.inputmethod.EditorInfo;
-import android.view.KeyEvent;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.dabaewo1.R;
-import com.example.dabaewo1.SearchAdapter;
+import com.example.dabaewo1.lecture;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainMenuSearchFragment extends Fragment {
 
-    private List<String> list;
-    private ListView listView;
-    private EditText editSearch;
-    private SearchAdapter adapter;
-    private ArrayList<String> arraylist;
+    private FirebaseFirestore db;
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        // Firestore 인스턴스 초기화
+        db = FirebaseFirestore.getInstance();
+
+        // Firestore 데이터 가져오기 메서드 호출
+        fetchDataFromFirestore();
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_main_menu_search, container, false);
 
-        editSearch = rootView.findViewById(R.id.editSearch);
-        listView = rootView.findViewById(R.id.listView);
-
-        list = new ArrayList<String>();
-        settingList();
-        arraylist = new ArrayList<String>();
-        arraylist.addAll(list);
-        adapter = new SearchAdapter(list, requireContext());
-        listView.setAdapter(adapter);
-
-        editSearch.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-                String text = editable.toString();
-                if (!text.isEmpty() && text.charAt(text.length() - 1) == '\n') {
-                    // Enter 키를 눌렀을 때 처리
-                    editable.replace(text.length() - 1, text.length(), ""); // Enter 제거
-                    addToListAndRefresh(text); // 리스트에 추가하고 아답터 갱신
-                } else {
-                    search(text); // 엔터 키 이외의 입력에 대한 검색 처리
-                }
-            }
-        });
+        // 이곳에서 rootView 내의 뷰 요소들을 초기화하거나 처리할 수 있습니다.
 
         return rootView;
     }
 
-    private void addToListAndRefresh(String text) {
-        list.add(text.trim()); // 입력된 텍스트를 리스트에 추가
-        adapter.notifyDataSetChanged(); // 아답터 갱신
-    }
+    private void fetchDataFromFirestore() {
+        db.collection("daegu")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            List<lecture> lectures = new ArrayList<>();
+                            for (DocumentSnapshot document : task.getResult()) {
+                                lecture lecture1 = document.toObject(lecture.class);
+                                lectures.add(lecture1);
+                            }
+                            for (lecture lecture : lectures) {
+                                Log.d("Lecture", "Lecture: " + lecture.getLectureName());
+                            }
 
-    public void search(String charText) {
-        list.clear();
-
-        if (charText.length() == 0) {
-            list.addAll(arraylist);
-        } else {
-            for (int i = 0; i < arraylist.size(); i++) {
-                if (arraylist.get(i).toLowerCase().contains(charText)) {
-                    list.add(arraylist.get(i));
-                }
-            }
-        }
-
-        adapter.notifyDataSetChanged(); // 데이터 변경 알림
-    }
-
-    private void settingList() {
-        list.add("국어");
-        list.add("영어");
-        list.add("수학");
-        list.add("과학");
-        list.add("미술");
+                            // 가져온 데이터를 활용하여 원하는 처리를 수행할 수 있습니다.
+                        } else {
+                            // Firestore 데이터 가져오기 실패
+                        }
+                    }
+                });
     }
 }
