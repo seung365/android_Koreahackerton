@@ -78,7 +78,7 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/gmarketsansttflight"
+        android:fontFamily="@font/gmarketsansttfmedium"
         android:text="당신만의 학습도우미"
         android:textColor="@color/white"
         android:textSize="20dp"
