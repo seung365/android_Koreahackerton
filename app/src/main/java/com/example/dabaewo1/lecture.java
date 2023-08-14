@@ -43,6 +43,8 @@ public class lecture {
 
     public lecture() {
         // 기본 생성자
+    }public lecture(String lectureName, String lectureLocation, String lectureCategory, int lectureReco) {
+        // 기본 생성자
     }
 
     // Getter와 Setter 메서드를 정의합니다.
