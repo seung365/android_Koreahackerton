@@ -40,6 +40,7 @@ public class login2 extends AppCompatActivity
     private String id;
     private String phoneNumber;
     private String address;
+    private int age;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -78,6 +79,7 @@ public class login2 extends AppCompatActivity
         intent.putExtra("gender", gender);
         intent.putExtra("phoneNumber", phoneNumber);
         intent.putExtra("address", address);
+        intent.putExtra("age", age);
         startActivity(intent);
     }
     // 회원가입 기능.
@@ -93,6 +95,7 @@ public class login2 extends AppCompatActivity
         id = ((TextInputLayout) findViewById(R.id.login_id_Field)).getEditText().getText().toString();
         phoneNumber = ((TextInputLayout) findViewById(R.id.login_telefield)).getEditText().getText().toString();
         address = ((TextInputLayout) findViewById(R.id.login_add_field)).getEditText().getText().toString();
+        age = Integer.parseInt(((TextInputLayout) findViewById(R.id.agefield)).getEditText().getText().toString());
 
         if(id.length() > 0 && password.length() > 0 && name.length() > 0 && phoneNumber.length() > 9 && email.length() > 0 && address.length() > 0){ // 이메일 비번 안적었을 때
             mAuth.createUserWithEmailAndPassword(id, password)

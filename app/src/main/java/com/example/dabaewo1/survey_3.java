@@ -25,6 +25,7 @@ public class survey_3 extends AppCompatActivity {
     private String gender;
     private String phoneNumber;
     private String address;
+    private int age;
     private int job;
     private int interest;
     private Intent intent;
@@ -40,6 +41,7 @@ public class survey_3 extends AppCompatActivity {
         gender = intent.getStringExtra("gender");
         phoneNumber = intent.getStringExtra("phoneNumber");
         address = intent.getStringExtra("address");
+        age = intent.getIntExtra("age");
         job = intent.getIntExtra("job", 0);
         interest = intent.getIntExtra("interest", 0);
 
@@ -80,7 +82,7 @@ public class survey_3 extends AppCompatActivity {
     {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         FirebaseFirestore db = FirebaseFirestore.getInstance(); //fireStore 초기화
-        UserInfo userinfo = new UserInfo(name, nickname, email, gender, phoneNumber, address, job, interest, purpose);
+        UserInfo userinfo = new UserInfo(name, nickname, email, gender, phoneNumber, address, job, interest, purpose, age);
         if (user != null) {
             db.collection("users").document(user.getUid()).set(userinfo)
                     .addOnSuccessListener(new OnSuccessListener<Void>() {
