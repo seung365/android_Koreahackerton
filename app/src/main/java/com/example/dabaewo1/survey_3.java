@@ -41,7 +41,7 @@ public class survey_3 extends AppCompatActivity {
         gender = intent.getStringExtra("gender");
         phoneNumber = intent.getStringExtra("phoneNumber");
         address = intent.getStringExtra("address");
-        age = intent.getIntExtra("age");
+        age = intent.getIntExtra("age", 50);
         job = intent.getIntExtra("job", 0);
         interest = intent.getIntExtra("interest", 0);
 
@@ -74,11 +74,11 @@ public class survey_3 extends AppCompatActivity {
             } else if (id == R.id.purpose6) {
                 value = 5;
             }
-            updateUser(name, nickname, email, gender, phoneNumber, address, job, interest, value);
+            updateUser(name, nickname, email, gender, phoneNumber, address, job, interest, value, age);
         }
     };
 
-    public void updateUser(String name, String nickname, String email, String gender, String phoneNumber, String address, int job, int interest, int purpose)
+    public void updateUser(String name, String nickname, String email, String gender, String phoneNumber, String address, int job, int interest, int purpose, int age)
     {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         FirebaseFirestore db = FirebaseFirestore.getInstance(); //fireStore 초기화
