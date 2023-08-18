@@ -4,6 +4,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.JavascriptInterface;
+import android.webkit.WebChromeClient;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,6 +20,8 @@ import com.example.dabaewo1.fragment.*;
 import com.example.dabaewo1.lecture;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -27,6 +34,11 @@ public class MainMenuHomeFragment extends Fragment {
 
     private FragmentManager fragmentManager;
     private FirebaseFirestore db;
+    private WebView webView;
+    private FirebaseAuth mAuth;
+    private FirebaseUser user;
+    private TextView displayTextView;
+    private String dataToSend;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -77,7 +89,45 @@ public class MainMenuHomeFragment extends Fragment {
                 transaction.replace(R.id.menu_frame_layout, new MainMenuGptFragment()).commit();
             }
         });
+
 */
+
+        mAuth = FirebaseAuth.getInstance();
+        user = mAuth.getCurrentUser();
+        dataToSend = user.getUid(); // user uid 가져오기
+
+        displayTextView = rootView.findViewById(R.id.textgptcontext); // TextView 초기화
+        displayTextView.setText("기본값"); // 기본값 설정
+
+        webView = rootView.findViewById(R.id.HomewebView);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.setWebViewClient(new WebViewClient());
+        webView.setWebChromeClient(new WebChromeClient());
+
+        // 웹 페이지 로드
+        webView.loadUrl("https://hackerton-f6788.web.app/chatGPT");
+        webView.setVisibility(webView.GONE);
+
+        // 웹 뷰와 네이티브 앱 간 데이터 통신을 위한 인터페이스 설정
+        webView.addJavascriptInterface(new AppInterface(), "dabae");
+        //displayTextView.setText("왜안돼");
         return rootView;
+    }
+
+    public class AppInterface {
+        @JavascriptInterface
+        public String DataToWeb() {
+            // 네이티브 앱에서 생성한 데이터
+            return dataToSend;
+        }
+        @JavascriptInterface
+        public void dataToApp(String data) {
+            getActivity().runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    displayTextView.setText(data);
+                }
+            });
+        }
     }
 }

@@ -49,7 +49,6 @@ public class MainMenuGptFragment extends Fragment {
         webView.addJavascriptInterface(new AppInterface(), "dabae");
         displayTextView.setText("왜안돼");
 
-        // Javascript 명령 실행
 
         return rootView;
     }
