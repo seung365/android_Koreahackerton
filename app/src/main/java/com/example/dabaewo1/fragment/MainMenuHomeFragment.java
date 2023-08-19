@@ -91,13 +91,12 @@ public class MainMenuHomeFragment extends Fragment {
         });
 
 */
-
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
         dataToSend = user.getUid(); // user uid 가져오기
 
         displayTextView = rootView.findViewById(R.id.textgptcontext); // TextView 초기화
-        displayTextView.setText("기본값"); // 기본값 설정
+        displayTextView.setText("잠시만 기다려주십시오ㅅㄷ"); // 기본값 설정
 
         webView = rootView.findViewById(R.id.HomewebView);
         webView.getSettings().setJavaScriptEnabled(true);
@@ -110,7 +109,6 @@ public class MainMenuHomeFragment extends Fragment {
 
         // 웹 뷰와 네이티브 앱 간 데이터 통신을 위한 인터페이스 설정
         webView.addJavascriptInterface(new AppInterface(), "dabae");
-        //displayTextView.setText("왜안돼");
         return rootView;
     }
 
@@ -122,12 +120,17 @@ public class MainMenuHomeFragment extends Fragment {
         }
         @JavascriptInterface
         public void dataToApp(String data) {
-            getActivity().runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    displayTextView.setText(data);
-                }
-            });
+            updateGPT(data);
         }
+
+    }
+
+    private void updateGPT(String data){
+        getActivity().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                displayTextView.setText(data);
+            }
+        });
     }
 }
