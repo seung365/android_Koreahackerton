@@ -8,6 +8,7 @@ import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -39,6 +40,8 @@ public class MainMenuHomeFragment extends Fragment {
     private FirebaseUser user;
     private TextView displayTextView;
     private String dataToSend;
+
+    private TextView name1;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -91,6 +94,32 @@ public class MainMenuHomeFragment extends Fragment {
         });
 
 */
+        mAuth = FirebaseAuth.getInstance();
+        db = FirebaseFirestore.getInstance();
+        name1 = rootView.findViewById(R.id.name1);
+        String currentUserUid = mAuth.getCurrentUser().getUid();
+
+        db.collection("users")
+                .document(currentUserUid)
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                        if (task.isSuccessful()) {
+                            DocumentSnapshot document = task.getResult();
+                            if (document.exists()) {
+                                String username = document.getString("name"); // "name"은 해당 필드의 이름
+                                name1.setText(username);
+
+                            }
+                        }
+                    }
+                });
+
+
+
+
+
         mAuth = FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
         dataToSend = user.getUid(); // user uid 가져오기
