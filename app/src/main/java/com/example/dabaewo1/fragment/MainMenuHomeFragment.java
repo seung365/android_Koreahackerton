@@ -95,7 +95,7 @@ public class MainMenuHomeFragment extends Fragment {
         user = mAuth.getCurrentUser();
         dataToSend = user.getUid(); // user uid 가져오기
 
-        displayTextView = rootView.findViewById(R.id.textgptcontext); // TextView 초기화
+        displayTextView = rootView.findViewById(R.id.textgptcontext2); // TextView 초기화
         displayTextView.setText("잠시만 기다려주십시오"); // 기본값 설정
 
         webView = rootView.findViewById(R.id.HomewebView);
